@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MenuCard from '../shared/MenuCard';
+import Section from '../shared/Section';
 
 const OurMenu = () => {
 
@@ -16,11 +17,15 @@ const OurMenu = () => {
             })
     }, [])
     return (
+        <section>
+            <Section heading="From Our Menu"
+    subHeading="Popular Items"></Section>
         <div className='grid md:grid-cols-2 gap-10 space-y-4'>
             {
                 items.map(item => <MenuCard key={item._id} item={item}></MenuCard>)
             }
         </div>
+        </section>
     );
 };
 
