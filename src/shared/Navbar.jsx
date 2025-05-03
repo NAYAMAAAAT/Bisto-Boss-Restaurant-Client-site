@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import ShopinCard from '../assets/icon/shopingCart.png'
 
 const Navbar = () => {
     const navOptions = <>
@@ -7,7 +8,7 @@ const Navbar = () => {
         <NavLink to='/contact' className={({ isActive }) => isActive ? 'uppercase  text-lg px-2 text-yellow-300 hover:text-white' : 'text-white text-lg px-2 uppercase hover:text-yellow-300'} >Contact Us</NavLink>
         <NavLink to='/dashboard' className={({ isActive }) => isActive ? 'uppercase  text-lg px-2 text-yellow-300 hover:text-white' : 'text-white text-lg px-2 uppercase hover:text-yellow-300'} >Dashboard</NavLink>
         <NavLink to='/ourmenu' className={({ isActive }) => isActive ? 'uppercase  text-lg px-2 text-yellow-300 hover:text-white' : 'text-white text-lg px-2 uppercase hover:text-yellow-300'} >Our Menu</NavLink>
-        <NavLink to='/ourshop' className={({ isActive }) => isActive ? 'uppercase  text-lg px-2 text-yellow-300 hover:text-white' : 'text-white text-lg px-2 uppercase hover:text-yellow-300'} >Our Shop</NavLink>
+        <NavLink to='/ourshop/Salad' className={({ isActive }) => isActive ? 'uppercase  text-lg px-2 text-yellow-300 hover:text-white' : 'text-white text-lg px-2 uppercase hover:text-yellow-300'} >Our Shop</NavLink>
     </>
     return (
         <>
@@ -47,7 +48,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                <div>
+                <div className='items-center'>
+                    <img className='w-10 h-10' src={ShopinCard} alt="" />
                     <a className="btn">Button</a>
                 </div>
 
